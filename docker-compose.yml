@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  nginx:
+    image: nginx:1.17-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    restart: always
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./certbot:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    networks:
+      - reverse_proxy
+
+networks:
+  reverse_proxy:
+    name: reverse_proxy

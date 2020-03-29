@@ -1,0 +1,6 @@
+server {
+    server_name DOMAIN;
+    listen 80;
+    listen [::]:80;
+    root /var/www/certbot;
+}
