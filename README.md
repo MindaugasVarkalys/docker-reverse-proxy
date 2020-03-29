@@ -41,7 +41,7 @@ When run, this command does the following things:
 Command has the following options:
 - `--domain, -d` (required) - Domain where you want to host your site.
 - `--email, -e` (required) - Your email. Email is required by Certbot when issuing a certificate.
-- `--port, -c` (optional) - Your web server's container exposed port. Defaults to `80`.
+- `--port, -p` (optional) - Your web server's container exposed port. Defaults to `80`.
 - `--container, -c` (optional) - The name of your project's web server container. Defaults to `DOMAIN_WITHOUT_DOTS + _web_1`. (e.g. if domain is `example.com`, the default container name is `examplecom_web_1`).
 This is the same how Docker names your container if you have docker-compose.yml file in the directory named as your domain (e.g. example.com) and your container named `web`.
   
