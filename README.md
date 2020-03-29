@@ -27,7 +27,7 @@ networks:
     external: true
 ``` 
 - (Re)start your container.
-- Run `sudo ./add-site.sh --domain YOUR_DOMAIN --email YOUR_EMAIL --container YOUR_WEB_SERVER_CONTAINER_NAME --port YOUR_WEB_SERVER_EXPOSED_POST` with the real values instead of placeholders.
+- Run `sudo ./add-site.sh --domain YOUR_DOMAIN --email YOUR_EMAIL --container YOUR_WEB_SERVER_CONTAINER_NAME --port YOUR_WEB_SERVER_EXPOSED_PORT` with the real values instead of placeholders.
 - Enter URL to the browser. Your site should be working!
 
 ## add-site.sh  
