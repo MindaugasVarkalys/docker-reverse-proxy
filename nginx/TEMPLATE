@@ -1,15 +1,8 @@
 server {
-    server_name www.DOMAIN;
+    server_name DOMAIN, www.DOMAIN;
     listen 80;
     listen [::]:80;
     return 301 https://DOMAIN$request_uri;
-}
-
-server {
-    server_name DOMAIN;
-    listen 80;
-    listen [::]:80;
-    return 301 https://$host$request_uri;
 }
 
 server {
