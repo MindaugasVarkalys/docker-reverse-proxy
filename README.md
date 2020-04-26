@@ -13,7 +13,7 @@ To achieve this [Nginx](https://www.nginx.com/) reverse proxy and [Certbot](http
 0 1 * * * cd /PATH_TO_THIS_REPOSITORY && docker-compose pull && docker-compose up -d
 ```
 
-## Adding new project
+## Adding a new project
 
 - Add `reverse_proxy` network to your project's web server container to make it accessible by Nginx reverse proxy.
 ```yaml
@@ -38,7 +38,7 @@ networks:
 
 When run, this script does the following things:
 
-- Copies Nginx configuration from [nginx/TEMPLATE_CERTBOT](/nginx/TEMPLATE_CERTBOT) file to host specified domain without SSL. This is required, so Certbot can access and verify the domain before issuing a certificate.
+- Copies Nginx configuration from [nginx/TEMPLATE_CERTBOT](/nginx/TEMPLATE_CERTBOT) file to host the specified domain without SSL. This is required, so Certbot can access and verify the domain before issuing a certificate.
 - Gets a certificate using Certbot Docker image.
 - Replaces Nginx configuration with [nginx/TEMPLATE](/nginx/TEMPLATE) to run the site with SSL.
 
