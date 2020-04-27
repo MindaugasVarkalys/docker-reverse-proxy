@@ -7,10 +7,9 @@ To achieve this [Nginx](https://www.nginx.com/) reverse proxy and [Certbot](http
 - Clone this repository: `git clone https://github.com/MindaugasVarkalys/docker-reverse-proxy.git && cd docker-reverse-proxy`
 - Start Nginx Docker container: `sudo docker-compose up -d`
 - Add execution permission to scripts: `sudo chmod +x add-site.sh renew-certificates.sh`
-- Add Cronjobs to renew SSL certificates and keep Nginx up-to-date: Run `sudo crontab -e` and paste the following lines. You should replace `PATH_TO_THIS_REPOSITORY` with the local absolute path of this repository.
+- Add Cronjob to renew SSL certificates and keep Nginx up-to-date: Run `sudo crontab -e` and paste the following lines. You should replace `PATH_TO_THIS_REPOSITORY` with the local absolute path of this repository.
 ```bash
 0 0 * * * /PATH_TO_THIS_REPOSITORY/renew-certificates.sh
-0 1 * * * cd /PATH_TO_THIS_REPOSITORY && docker-compose pull && docker-compose up -d
 ```
 
 ## Adding a new project
